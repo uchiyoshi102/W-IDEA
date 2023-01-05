@@ -1,0 +1,12 @@
+<!-- templates/idea/home_idea.html -->
+{% extends "home_topic.html" %}
+
+{%block content1 %}
+{% for idea in idea_list %}
+
+<div class="'post-entry">
+    <h2><a href="{% url 'idea_detail' idea.pk %}">{{idea.title}}</a></h2>
+    <p>{{idea.body}}</p>
+</div>
+{% endfor %}
+{% endblock content1 %}

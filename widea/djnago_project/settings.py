@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'accounts.apps.AccountsConfig',
-    'wide.apps.WideConfig',
+    'topic.apps.TopicConfig',
     'whitenoise.runserver_nostatic',
+    'idea.apps.IdeaConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,14 @@
+<!-- templates/topic/home_topic.html -->
+{% extends "base.html" %}
+
+{% block content %}
+{% for topic in topic_list %}
+  <div class="post-entry">
+    <h2><a href="{% url 'topic_detail' topic.pk %}">{{topic.title}}</a></h2>
+    <p>{{topic.body}}</p>
+  </div>
+
+  {% block content1 %}
+  {% endblock content1 %}
+{% endfor %}
+{% endblock content %}
