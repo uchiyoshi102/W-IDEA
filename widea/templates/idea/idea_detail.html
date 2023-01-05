@@ -1,0 +1,13 @@
+<!-- templates/idea/idea_detail.html -->
+{% extends "home_topic.html" %}
+
+{%block content1 %}
+<div class = "post-entry">
+    <h2>{{ idea.title }}</h2>
+    <p>{{ idea.body }}</p>
+</div>
+
+<p><a href ="{% url 'idea_edit' idea.pk %}">+ Edit Topic</a></p>
+<p><a href = "{% url 'idea_delete' idea.pk %}">+ Delete Topic</a></p>
+<a href = "{% url 'idea_new' idea.pk %}">+ Add New Idea</a>
+{% endblock content1 %}
